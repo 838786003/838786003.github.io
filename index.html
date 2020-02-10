@@ -40,7 +40,9 @@
 					<p class="indent"><h4>splite示例:</h4><br>
 					<img src="img/1.png"></p>
 					<h3>3.2大小比较</h3>
-					<p class="indent">str1 &gt(&lt)str2按照字典序比较大(小)</p>
+					<p class="indent">str1 &gt(&lt)str2按照字典序比较大(小)<br>
+					sort(str.begin(),str.end(),cmp);也可以对str内的字符按照ASCII排序
+					</p>
 					<h3>3.3 string与int互转 </h3>
 					<p class="indent">string转int:<br>
 					<img src="img/2.png"><br>
@@ -54,6 +56,19 @@
 					<h3>4.2 sort</h3>
 					<p class="indent">数组a[n]:sort(a,a+n,comp)<br>
 					vector&lt int &gt a:sort(a.begin(),b.end(),comp)</p>
+				<h2>5. about溢出</h2>
+					<h3>5.1 int变long long</h3>
+					<p class="indent">int的最大值为2147483647(共十位,0x7fffffff)，可变为#define ll long long(最后不能加分号)</p>
+				<h2>6.经典算法</h2>
+					<h3>6.1 递归案例</h3>
+					<p class="indent">Q:把M个同样的苹果放在N个同样的盘子里，允许有的盘子空着不放，问共有多少种不同的分法？（用K表示）5，1，1和1，5，1 是同一种分法.<br>
+					A:将M个苹果放在N个同样的盘子里，可以分为两种情况<br>
+					1.至少有一个盘子中为空。2.所有盘子都不为空
+					递归表达式为f(m,n)=f(m,n-1)+f(m-n,n);当遇到M&lt N的情况时可以看成将M个苹果放入M个盘子中，剩余的N-M个盘子为空。<br>
+					C:<img src="img/5.png"></p>
+				<h2>附录</h2>
+					<h3>ASCII表</h3>
+					<p class="indent"><img src="img/4.png"></p>
 				</td>
 			</tr>
 		</table>
